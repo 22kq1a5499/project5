@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>UI Pages</title>
+</head>
+<style>
+
+   h1{
+            text-shadow:  5px 5px 10px  rgb(11, 84, 220) ,10px 10px 20px rgb(91, 128, 168);
+   }
+   h3{
+    color:rgb(19, 0,128)
+   }
+   .cont {
+            width: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: black;
+            transition: transform 0.3s;
+            z-index: 1;
+            margin: auto;
+            padding: 10px; 
+            position: relative;
+            padding: 10px;
+        }
+        #background-video {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%;
+         min-height: 100%;
+        }
+   </style>
+   <script>
+    // User Validations
+function loginValidation() {
+        // Ramesh
+var uname = document.myform.username.value;
+         //Ramesh@123
+var password = document.myform.password.value;
+        if(uname==null || uname=="") {
+          alert("Name cant be blank")
+          return false;  
+       } else if (password.length<5){
+          alert("Password Must be 5 letters")
+          return false;
+       }  
+       return true                 
+    }         
+    var video = document.getElementById("background-video") ; 
+ </script>
+ </head>
+ <body>
+   
+      <video autoplay muted loop id="background-video">
+         <source src="video.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+     </video>
+     <form name="myform" action="loginSuccess.html" onsubmit="return loginValidation(this)">
+   <div class="cont">
+     <h2>Login Page</h2>  
+User Name : <input type="text" name="username" placeholder="Enter valid Username"> <br>
+Password :  <input type="password" name="password" placeholder="Enter valid Password" > <br>
+    <input type="submit" value="Submit">     
+ </div>   
+   </form>
+</body>
+</html>

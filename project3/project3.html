@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Menu Example</title>
+    <h1><marquee>Happiness is not in money,but in Shopping.So...keep shopping</marquee></h1>
+    <style>
+        body {
+            background-image: url('background.png');
+            background-size: 1800px 900px;
+        }
+        
+        h1 {
+            text-shadow: 5px 5px 10px rgb(180, 55, 180), 10px 10px 20px rgb(187, 75, 140);  
+        }
+
+        h2 {
+            text-shadow: 5px 5px 10px red, 10px 10px 20px rgb(187, 75, 140);
+            margin-top: 125px;
+            padding-bottom: 120px;
+        }
+
+        h3 {
+            color: rgb(232, 129, 182);
+        }
+
+        /* CSS for styling the navigation menu */
+        nav {
+            background-color: #36393a;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .cont {
+            width: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .cont:hover {
+            transform: scale(1.05);
+        }
+
+        .cont img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cont span {
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>SHOPPING MART</h1></center>
+
+    <nav>
+        <ul> 
+            <li><a href="#">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact us.html">Contact</a></li>
+            <li><a href="Registration .html">Registration</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <h2>
+        
+        <div class="images">
+            <a href="Groceries.html">
+                <div class="cont">
+                    <img src="grocery.jpg" alt="Groceries">
+                    <span>GROCERIES</span>
+                </div>
+            </a>
+            <a href="clothes.html">
+                <div class="cont">
+                    <img src="clothes.jpg" alt="Clothes">
+                    <span>CLOTHES</span>
+                </div>
+            </a>
+            <a href="Accessories.html">
+                <div class="cont">
+                    <img src="Accessories.jpg" alt="accessories">
+                    <span>ACCESSORIES</span>
+                </div>
+            </a>
+            <a href="Mobiles.html">
+                <div class="cont">
+                    <img src="image1.jpg" alt="Mobiles">
+                    <span>MOBILES</span>
+                </div>
+            </a>
+        </div>
+    </h2>
+</body>
+</html>

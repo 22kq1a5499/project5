@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <center>
+        <body>
+            <form action="Loginpage.html"></form>
+            <style>
+               body{
+                    background-image : url("registration bg.jpg");
+                    background-image : no-repeat;
+                    background-size : 1600px 900px;
+                }
+                   h1{
+                       color:rgb(188, 26, 105)
+                   }
+                   h3{
+                    text-shadow:  5px 5px 10px  rgb(64, 103, 176) ,10px 10px 20px rgb(91, 128, 168);
+                   }
+                   h4{
+                        text-shadow:  5px 5px 10px  red ,10px 10px 20px rgb(187, 75, 140);
+                       }
+                   </style>
+                   
+       
+            <script>
+                function validation()
+                 {
+                if (isEmpty(document.getElementById('data_2').value.trim())) {
+                alert('First name is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_3').value.trim())) {
+                alert('Last name is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_4').value.trim())) {
+                alert('Mobile Number is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_5').value.trim())) {
+                alert('Email is required!');
+                return false;
+                }
+
+                if (!validateEmail(document.getElementById('data_5').value.trim())) {
+                alert('Email must be a valid email address!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_6').value.trim())) {
+                alert('Date Of Joining is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_7').value.trim())) {
+                alert('Date Of Passing is required!');
+                return false;
+                }
+
+                if (isEmpty(document.getElementById('data_8').value.trim())) {
+                alert('DOB is required!');
+                return false;
+                }
+                if (isEmpty(document.getElementById('data_9').value.trim())) {
+                alert('Gender is required!');
+                return false;
+                }
+                if (isEmpty(document.getElementById('data_10').value.trim())) {
+                alert('Address is required!');
+                return false;
+                }
+                var data_6= document.getElementById("data_6").value.trim();
+                var data_7= document.getElementById("data_7").value.trim();
+                if(data_6 > data_7){
+                alert("Date Of Joining cannot be after Date Of Passing");
+                return false;
+                }
+                
+                 return true;
+                }
+                function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+                function validateEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                return isEmpty(email) || re.test(email);
+                }
+               
+            
+                </script>
+    </head>
+<body>
+    
+
+    <form  method="post" action="Loginpage.html" onSubmit="return validation();">
+        <div style="max-width: 400px;">
+        </div>
+
+        <div style="padding-bottom: 18px;font-size : 24px;"> Registration</div>
+        <div style="display: flex; padding-bottom: 18px;max-width : 450px;">
+        <div style=" margin-left: 0; margin-right: 1%; width: 49%;">First name<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_2" name="data_2" style="max-width: 100%;" class="form-control" placeholder="Enter First name"/>
+        </div>
+
+        <div style=" margin-left: 1%; margin-right: 0; width: 49%;">Last name<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_3" name="data_3" style="max-width: 100%;" class="form-control"  placeholder="Enter Last name"/>
+        </div>
+
+        </div>
+        
+        <div style="padding-bottom: 18px;">Mobile Number<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control"  placeholder="Enter Mobile Number"/>
+        </div>
+
+        <div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_5" name="data_5" style="max-width : 450px;" class="form-control"  placeholder="Enter valid Email"/>
+        </div>
+
+        <div style="padding-bottom: 18px;">Date Of Joining<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_6" name="data_6" style="max-width : 250px;" class="form-control"  placeholder="Enter Date of Join"/>
+        </div>
+        
+        <script>new day({ field: document.getElementById('data_6') });</script>
+        <div style="padding-bottom: 18px;">Date of Passing<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_7" name="data_7" style="max-width : 250px;" class="form-control"  placeholder="Enter Date Of Passing"/>
+        </div>
+        
+        <script>new day({ field: document.getElementById('data_7') });</script>
+        <div style="padding-bottom: 18px;">DOB<span style="color: red;"> *</span><br/>
+        <input type="date" id="data_8" name="data_8" style="max-width : 250px;" class="form-control"/>
+        </div>
+        <script>new day({ field: document.getElementById('data_8') });</script>
+        <div style="padding-bottom: 18px;">Gender<br/>
+        <input type="radio" name="M">Male<br>
+        <input type="radio" name="F" >Female<br>
+        <input type="radio" name="O" >Others <br>
+        <input type="radio" id="data_9" name="data_8" style="max-width : 250px;" class="form-control"/>
+        </div>
+        <script>new day({ field: document.getElementById('data_9') });</script>
+        <div style="padding-bottom: 18px;">Address<br/>
+        <textarea id="data_10" false name="data_10" style="max-width : 450px;" rows="6" class="form-control"  placeholder="Type here....."></textarea>
+        </div>
+
+        <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+        <div>
+        </form>
+</body>
+</center>
+</html>
